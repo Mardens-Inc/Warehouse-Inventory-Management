@@ -1,0 +1,201 @@
+{
+	"id": "fda67489610ca!",
+	"creation_date": "2025-03-05T15:24:45.657Z",
+	"status": "CREATED",
+	"inventory": {
+		"headers": [
+			"Item",
+			"Desc",
+			"Dept",
+			"Cat",
+			"SubCat",
+			"Season",
+			"Adv"
+		],
+		"data": [
+			{
+				"Item": "A124",
+				"Desc": "Wireless Headphones",
+				"Dept": "Electronics",
+				"Cat": "Audio",
+				"SubCat": "Headphones",
+				"Season": "Summer",
+				"Adv": "No"
+			},
+			{
+				"Item": "A125",
+				"Desc": "Gaming Laptop",
+				"Dept": "Electronics",
+				"Cat": "Computers",
+				"SubCat": "Laptops",
+				"Season": "Winter",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A126",
+				"Desc": "Smartwatch",
+				"Dept": "Electronics",
+				"Cat": "Wearables",
+				"SubCat": "Watches",
+				"Season": "Fall",
+				"Adv": "No"
+			},
+			{
+				"Item": "A127",
+				"Desc": "4K Monitor",
+				"Dept": "Electronics",
+				"Cat": "Displays",
+				"SubCat": "Monitors",
+				"Season": "Spring",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A128",
+				"Desc": "Bluetooth Speaker",
+				"Dept": "Electronics",
+				"Cat": "Audio",
+				"SubCat": "Speakers",
+				"Season": "Summer",
+				"Adv": "No"
+			},
+			{
+				"Item": "A129",
+				"Desc": "Gaming Mouse",
+				"Dept": "Electronics",
+				"Cat": "Accessories",
+				"SubCat": "Mice",
+				"Season": "Fall",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A130",
+				"Desc": "Tablet",
+				"Dept": "Electronics",
+				"Cat": "Computers",
+				"SubCat": "Tablets",
+				"Season": "Winter",
+				"Adv": "No"
+			},
+			{
+				"Item": "A131",
+				"Desc": "Wireless Charger",
+				"Dept": "Electronics",
+				"Cat": "Accessories",
+				"SubCat": "Chargers",
+				"Season": "Spring",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A132",
+				"Desc": "External Hard Drive",
+				"Dept": "Electronics",
+				"Cat": "Storage",
+				"SubCat": "HDD",
+				"Season": "Summer",
+				"Adv": "No"
+			},
+			{
+				"Item": "A133",
+				"Desc": "Noise Cancelling Earbuds",
+				"Dept": "Electronics",
+				"Cat": "Audio",
+				"SubCat": "Earbuds",
+				"Season": "Fall",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A134",
+				"Desc": "Smart Light Bulb",
+				"Dept": "Electronics",
+				"Cat": "Home Automation",
+				"SubCat": "Lighting",
+				"Season": "Winter",
+				"Adv": "No"
+			},
+			{
+				"Item": "A135",
+				"Desc": "Electric Scooter",
+				"Dept": "Electronics",
+				"Cat": "Transportation",
+				"SubCat": "Scooters",
+				"Season": "Summer",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A136",
+				"Desc": "Smart Thermostat",
+				"Dept": "Electronics",
+				"Cat": "Home Automation",
+				"SubCat": "Thermostats",
+				"Season": "Spring",
+				"Adv": "No"
+			},
+			{
+				"Item": "A137",
+				"Desc": "Gaming Console",
+				"Dept": "Electronics",
+				"Cat": "Entertainment",
+				"SubCat": "Consoles",
+				"Season": "Fall",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A138",
+				"Desc": "Drone",
+				"Dept": "Electronics",
+				"Cat": "Gadgets",
+				"SubCat": "Drones",
+				"Season": "Spring",
+				"Adv": "No"
+			},
+			{
+				"Item": "A139",
+				"Desc": "VR Headset",
+				"Dept": "Electronics",
+				"Cat": "Entertainment",
+				"SubCat": "Virtual Reality",
+				"Season": "Winter",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A140",
+				"Desc": "Portable Projector",
+				"Dept": "Electronics",
+				"Cat": "Displays",
+				"SubCat": "Projectors",
+				"Season": "Summer",
+				"Adv": "No"
+			},
+			{
+				"Item": "A141",
+				"Desc": "Smart Lock",
+				"Dept": "Electronics",
+				"Cat": "Home Automation",
+				"SubCat": "Security",
+				"Season": "Fall",
+				"Adv": "Yes"
+			},
+			{
+				"Item": "A142",
+				"Desc": "Action Camera",
+				"Dept": "Electronics",
+				"Cat": "Cameras",
+				"SubCat": "Sports",
+				"Season": "Spring",
+				"Adv": "No"
+			},
+			{
+				"Item": "A143",
+				"Desc": "E-Reader",
+				"Dept": "Electronics",
+				"Cat": "Gadgets",
+				"SubCat": "Readers",
+				"Season": "Winter",
+				"Adv": "Yes"
+			}
+		],
+		"limit": 20,
+		"offset": 0,
+		"total": 26710910
+	}
+}
