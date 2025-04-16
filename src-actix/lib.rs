@@ -1,31 +1,22 @@
 use actix_web::web;
 use anyhow::Result;
 use database_common_lib::actix_extension::create_http_server;
+use database_common_lib::database_connection::{create_pool, DatabaseConnectionData};
 use database_common_lib::set_database_name;
 use include_dir::include_dir;
 use log::*;
 use pretty_env_logger::env_logger;
 use serde_hash::salt::generate_salt;
+use std::sync::Arc;
 use vite_actix::start_vite_server;
 
-// Vendor Modules
-#[path = "vendors/vendors_data.rs"]
-mod vendors_data;
-#[path = "vendors/vendors_db.rs"]
-mod vendors_db;
-
-#[path = "vendors/vendors_endpoint.rs"]
-mod vendors_endpoint;
-// Contact Modules
-#[path = "vendors/contacts/contacts_data.rs"]
-mod contacts_data;
-#[path = "vendors/contacts/contacts_db.rs"]
-mod contacts_db;
-#[path = "vendors/contacts/contacts_endpoint.rs"]
-mod contacts_endpoint;
+// Import modules using simplified structure
+mod vendors;
+use vendors::contacts::contacts_db;
+use vendors::vendors_endpoint;
 
 pub static DEBUG: bool = cfg!(debug_assertions);
-const PORT: u16 = 1421;
+const PORT: u16 = 1428;
 
 pub async fn run() -> Result<()> {
     env_logger::builder()
@@ -42,10 +33,20 @@ pub async fn run() -> Result<()> {
         })
         .build();
 
+    let connection_data = DatabaseConnectionData::get().await?;
+    let pool = create_pool(&connection_data).await?;
+    contacts_db::initialize_database(&pool).await?;
+    pool.close().await;
+
     let server = create_http_server(
-        || {
-            Box::new(|cfg| {
-                cfg.service(web::scope("api").configure(vendors_endpoint::configure));
+        move || {
+            let connection_data = web::Data::new(Arc::new(connection_data.clone()));
+            Box::new(move |cfg| {
+                cfg.service(
+                    web::scope("api")
+                        .app_data(connection_data.clone())
+                        .configure(vendors_endpoint::configure),
+                );
             })
         },
         include_dir!("target/wwwroot"),
