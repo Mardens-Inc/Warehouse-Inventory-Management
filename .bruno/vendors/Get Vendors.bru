@@ -1,0 +1,17 @@
+meta {
+  name: Get Vendors
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{url}}/vendors
+  body: none
+  auth: none
+}
+
+docs {
+  # Get All Vendors
+  
+  This request retrieves all vendors from the database.
+}

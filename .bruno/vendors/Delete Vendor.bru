@@ -1,0 +1,31 @@
+meta {
+  name: Delete Vendor
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{url}}/vendors/:vendor_id
+  body: none
+  auth: none
+}
+
+params:path {
+  vendor_id: 
+}
+
+docs {
+  # Delete Vendor
+  
+  This request deletes an existing vendor from the database.
+  
+  ## Instructions
+  
+  Enter a valid hashed vendor ID in the path parameter `vendor_id`
+  
+  ## Notes
+  
+  - This operation will also delete all contacts associated with this vendor
+  - This operation cannot be undone
+  - A successful deletion returns a 204 No Content response
+}

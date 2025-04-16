@@ -1,0 +1,45 @@
+meta {
+  name: Update Vendor
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url}}/vendors/:vendor_id
+  body: json
+  auth: none
+}
+
+params:path {
+  vendor_id: 
+}
+
+body:json {
+  {
+    "name": "Acme Corporation",
+    "address": "456 Business Ave, Enterprise City, USA"
+  }
+}
+
+docs {
+  # Update Vendor
+  
+  This request updates an existing vendor's details.
+  
+  ## Instructions
+  
+  Enter a valid hashed vendor ID in the path parameter `vendor_id`
+  
+  ## Request Body
+  
+  - `name`: The vendor's updated name (required)
+  - `address`: The vendor's updated address (required)
+  
+  ## Response
+  
+  Upon successful update, the response will include the updated vendor object with:
+  - `id`: The hashed vendor ID (unchanged)
+  - `name`: The vendor's updated name
+  - `address`: The vendor's updated address
+  - `contacts`: Array of contact IDs (unchanged)
+}

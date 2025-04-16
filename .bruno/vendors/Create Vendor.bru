@@ -1,0 +1,37 @@
+meta {
+  name: Create Vendor
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/vendors
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Acme Inc",
+    "address": "123 Main St, Anytown, USA"
+  }
+}
+
+docs {
+  # Create New Vendor
+  
+  This request creates a new vendor in the database.
+  
+  ## Request Body
+  
+  - `name`: The vendor's name (required)
+  - `address`: The vendor's address (required)
+  
+  ## Response
+  
+  Upon successful creation, the response will include the complete vendor object with:
+  - `id`: The hashed vendor ID
+  - `name`: The vendor's name
+  - `address`: The vendor's address
+  - `contacts`: An initially empty array of contact IDs
+}

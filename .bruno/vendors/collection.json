@@ -1,0 +1,6 @@
+{
+  "name": "Vendors",
+  "version": "1",
+  "description": "API requests for managing vendors and their contacts",
+  "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+}
