@@ -1,0 +1,16 @@
+meta {
+  name: Get Contact by ID
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{url}}/vendors/:vendor_id/contacts/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  vendor_id: 
+  id: 
+}

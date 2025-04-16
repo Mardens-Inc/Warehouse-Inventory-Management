@@ -1,0 +1,27 @@
+meta {
+  name: Update Contact
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{url}}/vendors/:vendor_id/contacts/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  vendor_id: 
+  id: 
+}
+
+body:json {
+  {
+    "id": "",
+    "name": "John Doe Updated",
+    "email": "john.updated@example.com",
+    "phone": "987-654-3210",
+    "address": "456 Second St",
+    "vendor_id": ""
+  }
+}

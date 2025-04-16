@@ -1,0 +1,25 @@
+meta {
+  name: Create Contact
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{url}}/vendors/:vendor_id/contacts
+  body: json
+  auth: inherit
+}
+
+params:path {
+  vendor_id: 
+}
+
+body:json {
+  {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "123-456-7890",
+    "address": "123 Main St",
+    "vendor_id": ""
+  }
+}
