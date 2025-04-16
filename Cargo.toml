@@ -15,7 +15,7 @@ crate-type = ["lib"]
 
 [dependencies]
 actix-web = { version = "4.9.0" }
-serde = { version = "1.0.208", features = ["derive"] }
+serde = { version = "1.0.208", features = ["derive", "serde_derive", "alloc"] }
 serde_json = { version = "1.0.125" }
 pretty_env_logger = "0.5.0"
 include_dir = "0.7.4"
@@ -27,6 +27,7 @@ database-common-lib = { git = "https://github.com/Mardens-Inc/database-common-li
 sqlx = { version = "0.8.4", features = ["chrono", "json", "mysql", "derive", "runtime-tokio"] }
 chrono = { version = "0.4.40", features = ["serde", "now", "clock"] }
 serde_hash = { version = "0.1.1" }
+futures = { version = "0.3.31", features = [] }
 
 
 
