@@ -1,11 +1,13 @@
 use serde_hash::HashIds;
 
-#[derive(HashIds)]
+#[derive(HashIds, sqlx::FromRow)]
 pub struct VendorData {
 	#[hash]
-	id: u64,
-	name: String,
-	address: String,
+	#[sqlx(primary_key)]
+	pub id: u64,
+	pub name: String,
+	pub address: String,
 	#[hash]
-	contacts: Vec<u64>
+	#[sqlx(skip)]
+	pub contacts: Vec<u64>
 }
