@@ -1,8 +1,9 @@
 
-use actix_web::{web, HttpResponse, Responder};
-use anyhow::Result;
+use actix_web::{get, web, HttpResponse, Responder};
+use database_common_lib::http_error::Result;
 
-fn index() -> Result<impl Responder> {
+#[get("")]
+async fn index() -> Result<impl Responder> {
     Ok(HttpResponse::Ok().body("Hello World!"))
 }
 
